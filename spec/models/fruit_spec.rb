@@ -1,5 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe Fruit, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "an apple" do
+    before do
+      @apple = Apple.new
+    end
+
+    it "should not be squishy" do
+      expect(@apple.squishy?).to be false
+    end
+  end
+
+  describe "a pear" do
+    before do
+      @pear = Pear.new
+    end
+
+    it "should be kind of squishy" do
+      expect(@pear.squishy?).to be true
+    end
+  end
 end
